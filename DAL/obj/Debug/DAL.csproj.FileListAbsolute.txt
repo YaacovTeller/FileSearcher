@@ -1,0 +1,12 @@
+C:\Users\Rivka and Yaacov\source\repos\C#\FileSearchPROJECT\DAL\bin\Debug\DAL.dll.config
+C:\Users\Rivka and Yaacov\source\repos\C#\FileSearchPROJECT\DAL\bin\Debug\DAL.dll
+C:\Users\Rivka and Yaacov\source\repos\C#\FileSearchPROJECT\DAL\bin\Debug\DAL.pdb
+C:\Users\Rivka and Yaacov\source\repos\C#\FileSearchPROJECT\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Rivka and Yaacov\source\repos\C#\FileSearchPROJECT\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Rivka and Yaacov\source\repos\C#\FileSearchPROJECT\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Rivka and Yaacov\source\repos\C#\FileSearchPROJECT\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Rivka and Yaacov\source\repos\C#\FileSearchPROJECT\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\Rivka and Yaacov\source\repos\C#\FileSearchPROJECT\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Rivka and Yaacov\source\repos\C#\FileSearchPROJECT\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Rivka and Yaacov\source\repos\C#\FileSearchPROJECT\DAL\obj\Debug\DAL.dll
+C:\Users\Rivka and Yaacov\source\repos\C#\FileSearchPROJECT\DAL\obj\Debug\DAL.pdb

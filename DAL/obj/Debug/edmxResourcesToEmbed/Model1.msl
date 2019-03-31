@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SearchResultsModelStoreContainer" CdmEntityContainer="SearchResultsEntities">
+    <EntitySetMapping Name="SearchTables">
+      <EntityTypeMapping TypeName="SearchResultsModel.SearchTable">
+        <MappingFragment StoreEntitySet="SearchTable">
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Results" ColumnName="Results" />
+          <ScalarProperty Name="Directory" ColumnName="Directory" />
+          <ScalarProperty Name="Search_String" ColumnName="Search_String" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

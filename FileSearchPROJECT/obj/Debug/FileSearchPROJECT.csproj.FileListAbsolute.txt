@@ -1,0 +1,25 @@
+C:\Users\jbt\source\repos\FileSearchPROJECT\FileSearchPROJECT\obj\Debug\FileSearchPROJECT.csprojAssemblyReference.cache
+C:\Users\jbt\source\repos\FileSearchPROJECT\FileSearchPROJECT\obj\Debug\FileSearchPROJECT.csproj.CoreCompileInputs.cache
+C:\Users\jbt\source\repos\FileSearchPROJECT\FileSearchPROJECT\bin\Debug\FileSearchPROJECT.exe.config
+C:\Users\jbt\source\repos\FileSearchPROJECT\FileSearchPROJECT\bin\Debug\FileSearchPROJECT.exe
+C:\Users\jbt\source\repos\FileSearchPROJECT\FileSearchPROJECT\bin\Debug\FileSearchPROJECT.pdb
+C:\Users\jbt\source\repos\FileSearchPROJECT\FileSearchPROJECT\obj\Debug\FileSearchPROJECT.exe
+C:\Users\jbt\source\repos\FileSearchPROJECT\FileSearchPROJECT\obj\Debug\FileSearchPROJECT.pdb
+C:\Users\Rivka and Yaacov\source\repos\C#\FileSearchPROJECT\FileSearchPROJECT\bin\Debug\FileSearchPROJECT.exe.config
+C:\Users\Rivka and Yaacov\source\repos\C#\FileSearchPROJECT\FileSearchPROJECT\bin\Debug\FileSearchPROJECT.exe
+C:\Users\Rivka and Yaacov\source\repos\C#\FileSearchPROJECT\FileSearchPROJECT\bin\Debug\FileSearchPROJECT.pdb
+C:\Users\Rivka and Yaacov\source\repos\C#\FileSearchPROJECT\FileSearchPROJECT\obj\Debug\FileSearchPROJECT.csprojAssemblyReference.cache
+C:\Users\Rivka and Yaacov\source\repos\C#\FileSearchPROJECT\FileSearchPROJECT\obj\Debug\FileSearchPROJECT.csproj.CoreCompileInputs.cache
+C:\Users\Rivka and Yaacov\source\repos\C#\FileSearchPROJECT\FileSearchPROJECT\obj\Debug\FileSearchPROJECT.exe
+C:\Users\Rivka and Yaacov\source\repos\C#\FileSearchPROJECT\FileSearchPROJECT\obj\Debug\FileSearchPROJECT.pdb
+C:\Users\Rivka and Yaacov\source\repos\C#\FileSearchPROJECT\FileSearchPROJECT\bin\Debug\DAL.dll
+C:\Users\Rivka and Yaacov\source\repos\C#\FileSearchPROJECT\FileSearchPROJECT\bin\Debug\EntityFramework.dll
+C:\Users\Rivka and Yaacov\source\repos\C#\FileSearchPROJECT\FileSearchPROJECT\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Rivka and Yaacov\source\repos\C#\FileSearchPROJECT\FileSearchPROJECT\bin\Debug\DAL.pdb
+C:\Users\Rivka and Yaacov\source\repos\C#\FileSearchPROJECT\FileSearchPROJECT\bin\Debug\DAL.dll.config
+C:\Users\Rivka and Yaacov\source\repos\C#\FileSearchPROJECT\FileSearchPROJECT\bin\Debug\EntityFramework.xml
+C:\Users\Rivka and Yaacov\source\repos\C#\FileSearchPROJECT\FileSearchPROJECT\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Rivka and Yaacov\source\repos\C#\FileSearchPROJECT\FileSearchPROJECT\obj\Debug\FileSearchPROJECT.csproj.CopyComplete
+C:\Users\Rivka and Yaacov\source\repos\C#\FileSearchPROJECT\FileSearchPROJECT\bin\Debug\BL.dll
+C:\Users\Rivka and Yaacov\source\repos\C#\FileSearchPROJECT\FileSearchPROJECT\bin\Debug\BL.pdb
+C:\Users\Rivka and Yaacov\source\repos\C#\FileSearchPROJECT\FileSearchPROJECT\bin\Debug\BL.dll.config
