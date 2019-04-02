@@ -15,19 +15,22 @@ namespace FileSearchPROJECT
         static public string userString = "";
         static public DirectoryInfo userDirectory = null;
         static public string searchTxt = "";
+        static public string searchTxtEdit = "";
         static public DateTime searchStartTime;
+        static public List<string> UIresultsList = new List<string>();
 
         public static void userConditionedSearch()
         {
             enterSearchKey();
             enterDirectory();      
-            implementSearch(); //Runs search from BL
+            implementSearch();
+            UIresultsList = BL.Searches.dirConditionedSearch(userDirectory, searchTxtEdit);
             results();
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("Saving to database, please wait...");
             BL.Searches.addToDB(searchTxt, userDirectory.FullName);
             Console.WriteLine("Save successful!");
-            Console.WriteLine("");
+            Console.WriteLine();
             BL.Searches.reset();
             newSearchMenu();
         }
@@ -103,17 +106,17 @@ namespace FileSearchPROJECT
                     }
                     try
                     {
-                        userDirectory = new DirectoryInfo(userString);
+                        userDirectory = BL.Searches.validateDirectory(userString);
                     }
                     catch { }
-                    if (!userDirectory.Exists)
+                    if (userDirectory == null)
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("Invalid directory");
                         Console.ForegroundColor = ConsoleColor.Gray;
                     }
                 }
-                while (!userDirectory.Exists);
+                while (userDirectory==null);
             }
         }
 
@@ -129,14 +132,13 @@ namespace FileSearchPROJECT
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Searching \"{0}\" for \"{1}\"", userDirectory.FullName, searchTxt);
             Console.ForegroundColor = ConsoleColor.DarkGray;
-            string searchTxtEdit = searchTxt.ToLower();
+            searchTxtEdit = searchTxt.ToLower();
             searchStartTime = DateTime.Now;
-            BL.Searches.dirConditionedSearch(userDirectory, searchTxtEdit); //CALLS SEARCH FROM BL
-            Console.WriteLine();
         }
 
         public static void results()
         {
+            Console.WriteLine();
             displayList();
             BL.Searches.searchEndTime = DateTime.Now;
             Console.ForegroundColor = ConsoleColor.Green;
@@ -151,21 +153,21 @@ namespace FileSearchPROJECT
         }
         public static void displayList()
         {
-            foreach (var x in BL.Searches.resultsList)
+            foreach (var x in UIresultsList)
             {
                 Console.WriteLine(x);
             }
             Console.WriteLine("");
         }
-        public static void writeLine(string str)
-        {
-            Console.WriteLine(str);
-        }
-        public static void writeError(string str)
-        {
-            Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.WriteLine(str);
-            Console.ForegroundColor = ConsoleColor.DarkGray;
-        }
+        //public static void writeLine(string str)
+        //{
+        //    Console.WriteLine(str);
+        //}
+        //public static void writeError(string str)
+        //{
+        //    Console.ForegroundColor = ConsoleColor.DarkYellow;
+        //    Console.WriteLine(str);
+        //    Console.ForegroundColor = ConsoleColor.DarkGray;
+        //}
     }
 }

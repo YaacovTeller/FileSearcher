@@ -18,7 +18,22 @@ namespace BL
         static public int resultsCount = 0;
         static public DateTime searchEndTime;
         static public List<string> resultsList = new List<string>();
+        static public DirectoryInfo userDirectory = null;
         static public int i;
+
+        public static DirectoryInfo validateDirectory(string userString)
+        {
+            try
+            {
+                userDirectory = new DirectoryInfo(userString);
+            }
+            catch { }
+            if (!userDirectory.Exists)
+            {
+                return null;
+            }
+            else return userDirectory;
+        }
 
         public static List<string> dirConditionedSearch(DirectoryInfo dirstr, string searchTxt)
         {
