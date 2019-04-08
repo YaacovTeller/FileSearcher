@@ -21,6 +21,9 @@ namespace BL
         static public DirectoryInfo userDirectory = null;
         static public int i;
 
+        public delegate void ResultsDisplayManager(string str);
+        public delegate void ErrorDisplayManager(string str);
+
         public static DirectoryInfo validateDirectory(string userString)
         {
             try
@@ -35,26 +38,26 @@ namespace BL
             else return userDirectory;
         }
 
-        public static List<string> dirConditionedSearch(DirectoryInfo dirstr, string searchTxt)
+        public static List<string> dirConditionedSearch(DirectoryInfo dirstr, string searchTxt, ResultsDisplayManager showRes, ErrorDisplayManager showErr)
         {
-             fileSearch(dirstr, searchTxt);
+             fileSearch(dirstr, searchTxt, showRes);
              foreach (DirectoryInfo a in dirstr.GetDirectories())
              {
                  try
                  {
                      folderCount++;
-                     dirConditionedSearch(a, searchTxt);
+                     dirConditionedSearch(a, searchTxt, showRes, showErr);
                  }
                  catch (Exception ex)
                  {
                      fileException++;
-  //                   ConditionedSearch.writeError(ex.Message);
+                    showErr(ex.Message);
                  }
              }
             return resultsList;
         }
 
-        public static void fileSearch(DirectoryInfo folder, string searchTxt)
+        public static void fileSearch(DirectoryInfo folder, string searchTxt, ResultsDisplayManager showRes)
         {
             foreach (FileInfo b in folder.GetFiles())
             {
@@ -63,7 +66,7 @@ namespace BL
                 {
                     resultsList.Add(b.FullName);
                     resultsCount++;
-  //                  ConditionedSearch.writeLine(b.FullName);
+                    showRes(b.FullName);
                 }
             }
         }
@@ -78,10 +81,10 @@ namespace BL
             resultsCount = 0;
         }
 
-        public static void addToDB(string searchTxt, string fullDirectory)
+        public static void addToDB(string searchTxt, string fullDirectory, ResultsDisplayManager showRes)
         {
-  //          Console.ForegroundColor = ConsoleColor.DarkGreen;
-  //          ConditionedSearch.writeLine("Saving to database, please wait...");   
+            //          Console.ForegroundColor = ConsoleColor.DarkGreen;
+                      showRes("Saving to database, please wait...");   
 
             int resultsLooper = resultsList.Count > 0 ? resultsList.Count : 1;
             for (i = 1; i <= resultsLooper; i++)
@@ -96,8 +99,7 @@ namespace BL
                 DAL.DataClass.searchDB.SearchTables.Add(ks);
             }
             DAL.DataClass.searchDB.SaveChanges();
-  //          ConditionedSearch.writeLine("Save successful!");
-  //          ConditionedSearch.writeLine("");
+                      showRes("Save successful!");
         }
     }
 }

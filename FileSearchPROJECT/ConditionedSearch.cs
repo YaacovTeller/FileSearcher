@@ -24,12 +24,12 @@ namespace FileSearchPROJECT
             enterSearchKey();
             enterDirectory();      
             implementSearch();
-            UIresultsList = BL.Searches.dirConditionedSearch(userDirectory, searchTxtEdit);
+            UIresultsList = BL.Searches.dirConditionedSearch(userDirectory, searchTxtEdit, writeLine, writeError);
             results();
             Console.ForegroundColor = ConsoleColor.DarkGreen;
-            Console.WriteLine("Saving to database, please wait...");
-            BL.Searches.addToDB(searchTxt, userDirectory.FullName);
-            Console.WriteLine("Save successful!");
+     //       Console.WriteLine("Saving to database, please wait...");
+            BL.Searches.addToDB(searchTxt, userDirectory.FullName, writeLine);
+    //        Console.WriteLine("Save successful!");
             Console.WriteLine();
             BL.Searches.reset();
             newSearchMenu();
@@ -124,7 +124,7 @@ namespace FileSearchPROJECT
         {
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine("Enter search string:");
-            searchTxt = Console.ReadLine();    
+            searchTxt = Console.ReadLine().Trim();    
         }
 
         public static void implementSearch()
@@ -139,7 +139,7 @@ namespace FileSearchPROJECT
         public static void results()
         {
             Console.WriteLine();
-            displayList();
+    //        displayList();
             BL.Searches.searchEndTime = DateTime.Now;
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Search ran from " + searchStartTime.ToString("h:mm:ss:ff tt")
@@ -151,23 +151,23 @@ namespace FileSearchPROJECT
             Console.WriteLine();
     //        Console.ForegroundColor = ConsoleColor.Red;
         }
-        public static void displayList()
+        //public static void displayList()
+        //{
+        //    foreach (var x in UIresultsList)
+        //    {
+        //        Console.WriteLine(x);
+        //    }
+        //    Console.WriteLine("");
+        //}
+        public static void writeLine(string str)
         {
-            foreach (var x in UIresultsList)
-            {
-                Console.WriteLine(x);
-            }
-            Console.WriteLine("");
+            Console.WriteLine(str);
         }
-        //public static void writeLine(string str)
-        //{
-        //    Console.WriteLine(str);
-        //}
-        //public static void writeError(string str)
-        //{
-        //    Console.ForegroundColor = ConsoleColor.DarkYellow;
-        //    Console.WriteLine(str);
-        //    Console.ForegroundColor = ConsoleColor.DarkGray;
-        //}
+        public static void writeError(string str)
+        {
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine(str);
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+        }
     }
 }
